@@ -1,0 +1,15 @@
+box: ruby:2.3.0
+services:
+    - id: mdillon/postgis
+      env:
+        POSTGRES_DB: db
+        POSTGRES_USER: sauron
+        POSTGRES_PASSWORD: yoloafaik
+build:
+    steps:
+        - script:
+            name: env
+            code: env
+        - script:
+            name: docker-ps
+            code: docker ps -a
