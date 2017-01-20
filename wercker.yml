@@ -10,6 +10,7 @@ build:
         - script:
             name: env
             code: env
+        - bundle-install
         - script:
-            name: docker-ps
-            code: docker ps -a
+            name: Database health check
+            code: bundle exec rake db:check
